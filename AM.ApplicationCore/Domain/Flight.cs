@@ -8,5 +8,18 @@ namespace AM.ApplicationCore.Domain
 {
     internal class Flight
     {
+        public string Destination { get; set; }
+        public string Departure { get; set; }
+        public DateTime FlightDate { get; set; }
+        public int FlightId { get; set; }
+        public DateTime EffectiveArrival { get; set; }
+        public int EstimatedDuration { get; set; }
+        Plane MyPlane { get; set; }
+
+         public override string ToString()
+                {
+                    return "FlightId: " + FlightId + " Destination: " + Destination + " Departure: " + Departure + " FlightDate: " + FlightDate + " EffectiveArrival: " + EffectiveArrival + " EstimatedDuration: " + EstimatedDuration + " Plane: " + MyPlane;
+                }
+
     }
 }
