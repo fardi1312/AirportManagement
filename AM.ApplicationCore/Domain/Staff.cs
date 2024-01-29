@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AM.ApplicationCore.Domain
 {
-    internal class Staff
+    public class Staff: Passenger
     {
         public DateTime EmploymentDate { get; set; }
         public string Function { get; set; }
@@ -14,7 +14,7 @@ namespace AM.ApplicationCore.Domain
 
         public override string ToString()
         {
-                    return "EmploymentDate: " + EmploymentDate + " Function: " + Function + " Salary: " + Salary;
+                    return base.ToString + "EmploymentDate: " + EmploymentDate + " Function: " + Function + " Salary: " + Salary;
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AM.ApplicationCore.Domain
 {
-    internal class Passenger
+    public class Passenger
     {
         public DateTime BirthDate { get; set; }
         public string PassportNumber { get; set; }
@@ -15,7 +15,7 @@ namespace AM.ApplicationCore.Domain
         public string LastName { get; set; }
         public string TelNumber { get; set; }
 
-        ICollection<Plane> planes { get; set; }
+        public ICollection<Flight> flights { get; set; }
 
         public override string ToString()
         {

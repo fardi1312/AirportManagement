@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AM.ApplicationCore.Domain
 {
-    internal class Flight
+    public class Flight
     {
         public string Destination { get; set; }
         public string Departure { get; set; }
@@ -14,9 +14,12 @@ namespace AM.ApplicationCore.Domain
         public int FlightId { get; set; }
         public DateTime EffectiveArrival { get; set; }
         public int EstimatedDuration { get; set; }
-        Plane MyPlane { get; set; }
+        public Plane MyPlane { get; set; }
 
-         public override string ToString()
+        public ICollection<Passenger> passengers { get; set; }
+
+
+        public override string ToString()
                 {
                     return "FlightId: " + FlightId + " Destination: " + Destination + " Departure: " + Departure + " FlightDate: " + FlightDate + " EffectiveArrival: " + EffectiveArrival + " EstimatedDuration: " + EstimatedDuration + " Plane: " + MyPlane;
                 }

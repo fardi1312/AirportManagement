@@ -6,21 +6,32 @@ using System.Threading.Tasks;
 
 namespace AM.ApplicationCore.Domain
 {
-    internal class Plane
+    public class Plane
     {
-        private int capacity { get; set; }
+        public int capacity { get; set; }
         public DateTime ManufactureDate { get; set; }
         public int PlaneId { get; set; }
         public PlaneType PlaneType { get; set; }
 
-        ICollection<Flight> flights { get; set; }
+        public ICollection<Flight> flights { get; set; }
 
-        ICollection<Passenger> passengers { get; set; }
+        /*
+        public Plane()
+        {
+        }
+        public Plane(PlaneType pt, int capacity, DateTime date)
+        {
+            this.PlaneType = pt;
+            this.capacity = capacity;
+            this.ManufactureDate = date;
+        }*/
+
 
 
         public override string ToString() { 
             return "PlaneId: " + PlaneId + " ManufactureDate: " + ManufactureDate + " PlaneType: " + PlaneType + " Capacity: " + capacity;
         }
+
 
     }
 
