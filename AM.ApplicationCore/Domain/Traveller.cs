@@ -15,7 +15,10 @@ namespace AM.ApplicationCore.Domain
             return base.ToString + "HealthInformation: " + HealthInformation + "Nationality: " + Nationality;
         }
 
-
+        public virtual void PassengerType()
+        {
+            Console.WriteLine("I am a passenger and a traveller");
+        }
 
 
     }
