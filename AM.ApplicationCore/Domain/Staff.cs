@@ -17,9 +17,10 @@ namespace AM.ApplicationCore.Domain
                     return base.ToString + "EmploymentDate: " + EmploymentDate + " Function: " + Function + " Salary: " + Salary;
         }
 
-        public virtual void PassengerType()
+        public override void PassengerType()
         {
-            Console.WriteLine("I am a passenger and a staff member");
+            base.PassengerType();
+            Console.WriteLine("I am a staff member" );
         }
     }
 }

@@ -37,7 +37,7 @@ namespace AM.ApplicationCore.Domain
             return (this.FirstName == FirstName && this.LastName == LastName && (email == null || this.EmailAddress == email));
         }
 
-        public void PassengerType()
+        public virtual void PassengerType()
         {
             Console.WriteLine("I am a passenger");
         }
