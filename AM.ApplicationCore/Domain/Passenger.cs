@@ -21,7 +21,25 @@ namespace AM.ApplicationCore.Domain
         {
             return "BirthDate: " + BirthDate + " PassportNumber: " + PassportNumber + " EmailAddress: " + EmailAddress + " FirstName: " + FirstName + " LastName: " + LastName + " TelNumber: " + TelNumber;
         }
-        
+       /* public bool CheckProfile(string FirstName, string LastName)
+        {
+            return (this.FirstName == FirstName && this.LastName == LastName);
+        }
+
+        public bool CheckProfile(string FirstName, string LastName, string email)
+        {
+            return (this.FirstName == FirstName && this.LastName == LastName && this.EmailAddress == email);
+     
+        }*/
+
+        public bool CheckProfile(string FirstName, string LastName, string? email = null)
+        {
+            return (this.FirstName == FirstName && this.LastName == LastName && (email == null || this.EmailAddress == email));
+        }
+
+
+
+
 
     }
 }

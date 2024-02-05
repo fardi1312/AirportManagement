@@ -15,7 +15,23 @@ Console.WriteLine(plane.ToString());
 
 Plane plane2 = new Plane(PlaneType.Boing, 20, DateTime.Now);
 plane2.PlaneId = 450;
-Console.WriteLine(plane2.ToString());*/
+Console.WriteLine(plane2.ToString());
 
-Plane plane3 = new Plane{PlaneId = 300, PlaneType = PlaneType.Airbus, capacity = 30, ManufactureDate = DateTime.Now};
-Console.WriteLine(plane3.ToString());
+Plane plane3 = new Plane{PlaneId = 300,
+    PlaneType = PlaneType.Airbus,
+    capacity = 30,
+    ManufactureDate = DateTime.Now};
+    Console.WriteLine(plane3.ToString());*/
+
+//CheckProfile
+Passenger passenger = new Passenger();
+passenger.BirthDate = DateTime.Now;
+passenger.EmailAddress = "a@a.com";
+passenger.FirstName = "A";
+passenger.LastName = "B";
+passenger.PassportNumber = "123";
+passenger.TelNumber = "123";
+Console.WriteLine(passenger.ToString());
+
+bool result = passenger.CheckProfile("A", "B", "a@a.comm");
+Console.WriteLine(result);
